@@ -69,7 +69,7 @@ header .container::after {
   position: absolute;
 }
 header .logo img {
-  height: 70px;
+  height: 40px;
 }
 header nav {
   flex: 1;

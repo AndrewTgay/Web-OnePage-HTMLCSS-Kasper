@@ -1,6 +1,7 @@
 /* start variables */
 :root {
   --main-color: #19c8fa;
+  --transparent-color: rgb(15 116 143 / 70%);
 }
 /* end variables */
 /* start global rules */
@@ -142,3 +143,88 @@ header .form i {
   right: 0;
 }
 /* end header */
+/* start landing section */
+.landing {
+  position: relative;
+  min-height: 100vh;
+  background-image: url(../images/landing.jpg);
+  background-size: cover;
+  z-index: -2;
+}
+.landing .overlay {
+  position: absolute;
+  background-color: rgb(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+.landing .text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--transparent-color);
+  z-index: 2;
+  padding: 60px;
+  width: 50%;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.landing .text .content {
+  max-width: 500px;
+}
+@media (max-width: 767px) {
+  .landing .text {
+    width: 100%;
+  }
+  .landing .text .content {
+    max-width: 100%;
+  }
+}
+.landing .text .content h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 1.6;
+}
+.landing .text .content p {
+  line-height: 2;
+  font-size: 14px;
+}
+.landing .change-background {
+  color: #ddd;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+@media (max-width: 767px) {
+  .landing .change-background {
+    display: none;
+  }
+}
+.landing .change-background.fa-angle-left {
+  left: 30px;
+}
+.landing .change-background.fa-angle-right {
+  right: 30px;
+}
+.landing .bullets {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  display: flex;
+}
+.landing .bullets li {
+  height: 20px;
+  width: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+.landing .bullets li.active {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+/* end landing section */

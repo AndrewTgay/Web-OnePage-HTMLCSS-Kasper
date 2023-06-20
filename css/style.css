@@ -18,7 +18,6 @@ html {
 }
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: black;
 }
 ul {
   list-style: none;
@@ -48,6 +47,46 @@ ul {
   }
 }
 /* end global rules */
+/* start componants */
+.main-heading {
+            ,,,,  color: black;
+  text-align: center;
+}
+.main-heading h2 {
+  font-size: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 70px;
+}
+.main-heading h2::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  background-color: #333;
+  bottom: -30px;
+  left: 50%;
+  transform: translatex(-50%);
+}
+.main-heading h2::after {
+  content: "";
+  position: absolute;
+  border: 2px solid #333;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  bottom: -38px;
+  left: 50%;
+  background-color: white;
+  transform: translatex(-50%);
+}
+.main-heading p {
+  color: #333;
+  width: 60%;
+  margin: 0 auto 100px;
+}
+/* end componants */
 /* start header */
 header {
   position: absolute;

@@ -49,7 +49,7 @@ ul {
 /* end global rules */
 /* start componants */
 .main-heading {
-            ,,,,  color: black;
+  color: black;
   text-align: center;
 }
 .main-heading h2 {
@@ -82,8 +82,8 @@ ul {
   transform: translatex(-50%);
 }
 .main-heading p {
-  color: #333;
-  width: 60%;
+  color: #777;
+  width: 50%;
   margin: 0 auto 100px;
 }
 /* end componants */
@@ -190,7 +190,7 @@ header .form i {
   background-size: cover;
   z-index: -2;
 }
-.landing .overlay {
+.overlay {
   position: absolute;
   background-color: rgb(0, 0, 0, 0.5);
   width: 100%;
@@ -212,7 +212,7 @@ header .form i {
 .landing .text .content {
   max-width: 500px;
 }
-@media (max-width: 767px) {
+@media ((max-width: 875px)) {
   .landing .text {
     width: 100%;
   }
@@ -267,3 +267,200 @@ header .form i {
   border-color: var(--main-color);
 }
 /* end landing section */
+/* start services section */
+.services {
+  padding: 100px 0;
+}
+.services .services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-column-gap: 40px;
+  grid-row-gap: 60px;
+}
+
+.services .services-content .one-serves {
+  display: flex;
+}
+.services .services-content .one-serves i {
+  font-size: 40px;
+}
+.services .services-content .one-serves .one-serve-text {
+  padding-left: 40px;
+}
+@media (max-width: 780px) {
+  .services .services-content {
+    display: block;
+  }
+  .services .services-content .one-serves {
+    flex-direction: column;
+    text-align: center;
+  }
+  .services .services-content .one-serves i {
+    margin: 0 0 19px;
+  }
+  .services .services-content .one-serves .one-serve-text {
+    padding-bottom: 40px;
+    padding-left: 0;
+  }
+}
+.services .services-content .one-serves .one-serve-text h2 {
+  font-size: 20px;
+  padding-bottom: 40px;
+  color: var(--main-color);
+}
+.services .services-content .one-serves .one-serve-text p {
+  color: #777;
+  line-height: 2;
+  font-size: 15px;
+}
+
+/* end services section */
+/* start design section */
+.design {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/design-features.jpg);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+.design .mobile-image {
+  position: absolute;
+  z-index: 1;
+  bottom: -100px;
+  left: 5%;
+}
+
+.design .text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--transparent-color);
+  z-index: 2;
+  padding: 60px;
+  right: 0;
+  width: 50%;
+  color: white;
+}
+@media (max-width: 800px) {
+  .design .mobile-image {
+    display: none;
+  }
+  .design .text {
+    width: 100%;
+  }
+}
+.design .text .element {
+  display: flex;
+  margin-top: 40px;
+}
+.design .text .element i {
+  margin-right: 25px;
+}
+/* end design section */
+/* start portofolio section */
+.portofolio {
+  padding: 100px 0;
+}
+.portofolio .taps {
+}
+.portofolio .taps ul {
+  display: flex;
+  justify-content: center;
+}
+.portofolio .taps ul li {
+  padding: 10px;
+}
+.portofolio .taps ul .active {
+  background-color: var(--main-color);
+  color: white;
+}
+.portofolio .gallery {
+  padding: 50px 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.portofolio .gallery .box {
+  position: relative;
+  overflow: hidden;
+}
+
+.portofolio .gallery .box img {
+  max-width: 100%;
+  transition: 0.3s;
+}
+.portofolio .gallery .box .text {
+  display: none;
+  transition: 0.3s;
+  background-color: white;
+  width: 100%;
+  height: 80px;
+  padding-left: 20px;
+}
+.portofolio .gallery .box:hover img {
+  /* transform: rotate(3deg) scale(1.1); */
+  transform: translateY(-20px);
+}
+.portofolio .gallery .box:hover img + .text {
+  position: absolute;
+  display: block;
+  bottom: 0;
+}
+.portofolio .gallery .box .text h2 {
+  padding: 13px 0;
+  font-weight: 100;
+  font-size: 17px;
+}
+.portofolio .gallery .box .text p {
+  color: var(--main-color);
+}
+.portofolio .more {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 15px;
+  background-color: var(--main-color);
+  border: none;
+  color: white;
+}
+
+/* end portofolio section */
+/* start video section */
+.video {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+.video::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+.video .text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  background-color: rgb(15 116 143 / 70%);
+  color: white;
+  padding: 50px;
+}
+.video .text h2 {
+  padding-bottom: 30px;
+  font-weight: normal;
+}
+.video .text p {
+  padding-bottom: 30px;
+}
+.video .text button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+}
+/* end video section */

@@ -541,14 +541,136 @@ header .form i {
   font-size: 50px;
   margin-bottom: 20px;
 }
-/* .stats .content .one-stats i::before {
-  content: "\f7b6";
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background-color: black;
-  border-radius: 50%;
-  top: 50%;
-  right: 50%;
-} */
 /* end stats section */
+/* start skills section */
+.testimonials-skills {
+  padding: 0 10px;
+}
+.testimonials-skills .container {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.testimonials-skills .container > div {
+  padding: 100px 0;
+}
+.testimonials-skills .container h4 {
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+.testimonials-skills .container p {
+  color: #777;
+}
+.testimonials-skills .container .testimonials {
+  position: relative;
+}
+.testimonials-skills .container .testimonials p {
+  margin-bottom: 60px;
+}
+.testimonials-skills .container .testimonials p::after {
+  margin-bottom: 60px;
+}
+@media (min-width: 992px) {
+  .testimonials-skills .container .testimonials,
+  .testimonials-skills .container .skills {
+    flex-basis: 45%;
+  }
+}
+.testimonials-skills .testimonials .one-testimonial {
+  display: flex;
+}
+
+.testimonials-skills .testimonials .one-testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.testimonials-skills .testimonials .one-testimonial .content {
+  position: relative;
+  margin: 0 50px;
+  text-align: left;
+}
+.testimonials-skills .testimonials .one-testimonial .content p {
+  /* position: absolute; */
+  text-align: right;
+}
+@media (max-width: 767px) {
+  .testimonials-skills .testimonials .one-testimonial {
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonials-skills .testimonials .one-testimonial .content {
+    margin: 0 auto;
+  }
+  .testimonials-skills .testimonials .one-testimonial .content h4 {
+    text-align: center;
+  }
+}
+.testimonials-skills .testimonials .one-testimonial .content p::after {
+  content: "";
+  border: 1px solid #ccc;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+}
+.testimonials-skills .container .testimonials ul {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.testimonials-skills .container .testimonials li {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #777;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+.testimonials-skills .container .testimonials .active {
+  background-color: #19c8fa;
+  border-color: #19c8fa;
+}
+.testimonials-skills .skills p {
+  margin-bottom: 60px;
+}
+.testimonials-skills .skills .one-skill {
+  margin-bottom: 40px;
+}
+.testimonials-skills .skills .one-skill h4 {
+  text-align: left;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.testimonials-skills .skills .one-skill .progress {
+  background-color: #dedadc;
+  height: 30px;
+}
+.testimonials-skills .skills .one-skill .progress span {
+  display: block;
+  background-color: var(--main-color);
+  height: 100%;
+  position: relative;
+}
+.testimonials-skills .skills .one-skill .progress span::before {
+  content: attr(data-progress);
+  position: absolute;
+  color: white;
+  background-color: black;
+  padding: 2px;
+  border-radius: 5px;
+  right: 0;
+  transform: translateX(50%);
+  top: -40px;
+}
+.testimonials-skills .skills .one-skill .progress span::after {
+  content: "";
+  position: absolute;
+  border: 8px solid;
+  border-color: black transparent transparent transparent;
+  right: 0;
+  transform: translateX(50%);
+  top: -18px;
+}
+/* end skills section */
